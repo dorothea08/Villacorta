@@ -1,15 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #b7d3fd;
+* {
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #ffa7dd;
+body {
+    font-family: "Arial", serif;
+    margin: 0;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #e7a3cd;
     color: white;
-    padding: 20px;
 }
 
 .navbar{
@@ -24,101 +26,86 @@ header {
 }
 
 .navbar a:hover {
-    background-color: #cafffb;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 165, 195);
 }
-
 .contact-container {
-    max-width: 90%;
-    width: 500px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 5px solid #ffffff;
-    border-radius: 10px;
-    background-color: rgb(255, 159, 231);
-}
-
-.email-form {
-    max-width: 350px;
-    width: 90%;
-    margin: 50px auto;
-    padding: 40px;
-    border: 5px solid #ffafe4;
-    border-radius: 10px;
-    background: linear-gradient(to bottom, #9fdcff, #fff);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.email-form h2 {
-    color: #ff5dbd;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.email-form .user-icon {
-    font-size: 60px;
-    color: #ff5dbd;
-    margin-bottom: 20px;
-}
-
-.email-form form {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
 }
 
-.email-form label {
-    font-weight: bold;
-    color: #333;
-    text-align: left;
+.contact-form, .contact-info {
+    background: rgb(255, 181, 233);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
 }
 
-.email-form input, 
-.email-form textarea {
+.contact-form h2, .contact-info h2 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ffafe4;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ffa5e4;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    background: rgb(194, 241, 255);
-    outline: none;
 }
 
-.email-form input:focus, 
-.email-form textarea:focus {
-    border: 1px solid #ff5dbd;
+button:hover {
+    background:#00495c;
 }
 
-.email-form .remember-me {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
+.social-links {
+    margin-top: 15px;
 }
 
-.email-form button {
-    background-color: #ff5dbd;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    cursor: pointer;
+.social-links a {
+    display: inline-block;
+    text-decoration: none;
+    color:#ff5fa1;
     font-weight: bold;
-    width: 100%;
-    transition: 0.3s;
+    margin-right: 10px;
 }
 
-.email-form button:hover {
-    background-color: #ff94d8;
+.social-links a:hover {
+    color: #8bdeff;
 }
 
 footer {
-    background-color: #333;
-    color: rgb(255, 181, 227);
-    padding: 10px;
-    width: 100%;
-    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 }
